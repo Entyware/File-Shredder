@@ -1,0 +1,29 @@
+#include "main_window.h"
+#include "text.h"
+
+//Program Icons
+MAIN_ICON ICON "icons\\shred_logo.ico"
+LOGO_BITMAP BITMAP "icons\\shred_logo.bmp"
+
+MAIN_MENU MENU 
+{
+ POPUP MENU_OPTIONS
+ {
+    POPUP MENU_MODE
+    {
+       MENUITEM MENU_SILENT, SILENT
+       MENUITEM MENU_CONFIRM, CONFIRM
+       MENUITEM MENU_VERBOSE, VERBOSE
+    }
+    POPUP MENU_METHOD
+    {
+       MENUITEM MENU_COVERT, COVERT
+       MENUITEM MENU_OVERT, OVERT
+    }
+    MENUITEM SEPARATOR
+    MENUITEM MENU_CLOSE, CLOSE_GUI
+ }
+ MENUITEM MENU_ABOUT, ABOUT
+
+
+}
