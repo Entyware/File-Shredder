@@ -1,3 +1,21 @@
+
+/*   File Shredder deletes files on a hard disk drive in a manner that is
+     intended to make any recovery of the data impossible    
+     Copyright (C) 2019  Alan Entwistle
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see https://www.gnu.org/licenses.      */
+
 #ifndef TEXT_H
 #define TEXT_H
 
@@ -16,23 +34,6 @@
 #define MENU_SILENT              "&Silent"
 #define MENU_CONFIRM             "&Request confirmation"
 #define MENU_VERBOSE             "&Verbose"
-
-/*   File Shredder deletes files on a hard disk drive in a manner that is
-     intended to make any recovery of the data impossible    
-     Copyright (C) 2019  Alan Entwistle
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see https://www.gnu.org/licenses.      */
 
 #define MENU_METHOD              "M&ethod"
 #define MENU_OVERT               "&Delete selected files directly"
@@ -110,11 +111,11 @@ understanding that it performs 'as is'."
 
 //About window text
 #define FILE_SHREDDER_VERSION   "File Shredder, version 001.00.030"
-#define FILE_SHREDDER_COPYRIGHT "File Shredder, copyright © 2019 Alan Entwistle"
+#define FILE_SHREDDER_COPYRIGHT "File Shredder, copyright Â© 2019 Alan Entwistle"
 #define CURRENT_VERSION         "version 001.00"
 #define ABOUT_USAGE             "Licence && terms of useage"
 #define ABOUT_CREDITS           "Random numbers are generated using a Mersenne \
-Twister © 2003 \r\nwritten by Richard J. Wagner, building on work by \
+Twister Â© 2003 \r\nwritten by Richard J. Wagner, building on work by \
 Makoto Matsumoto, \r\nTakuji Nishimura, and Shawn Cokus. Many thanks to \
 these people \r\nfor making their excellent work so easily accessible."
 
