@@ -14,8 +14,9 @@ select how the program runs through the Options menu on the menu bar. You can ch
 
    'Silent' meaning the program begins to shred files that are dragged and dropped onto the icon immediately without even 
       asking for confirmation that you wish to delete files; 
-   'Request confirmation' where you will be asked to confirm that you wish to delete the files.
-   'Verbose,' the default mode, where a window will inform you of the progress the program is making.
+   'Request confirmation' means that you will be asked to confirm that you wish to delete the files.
+   'Verbose,' the default mode, is whereyou will be asked to confirm that you wish to delete the files and then a window 
+   will inform you of the progress the program is making.
 
 In addition you can choose one of two 'Methods':
  
@@ -34,5 +35,5 @@ Windows was a problem.
 Alan Entwistle, Entyware
 
 This program was developed using Bloodshed Software Dev C++ version 4.9.9.2 and random numbers are generated using a Mersenne
-Twister © 2003 written by Richard J. Wagner, building on work by Makoto Matsumoto, Takuji Nishimura, and Shawn Cokus.
+Twister Â© 2003 written by Richard J. Wagner, building on work by Makoto Matsumoto, Takuji Nishimura, and Shawn Cokus.
 
