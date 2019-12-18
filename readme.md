@@ -8,14 +8,14 @@ system.
 
 To shred files select them and then drag and drop them onto the icon. The first time you run the program it will present you 
 with the licence agreement, once this is accepted you will be prompted to confirm that you wish to delete the files and, if 
-you confirm this, it will begin to shred the files. Alternatively you can double click on the program icon to open it. Here 
+you confirm this, it will begin to shred them. Alternatively you can double click on the program icon to open it. Here 
 too, on first use, the licensing agreement will be presented and, once the terms and conditions have been accepted you can 
 select how the program runs through the Options menu on the menu bar. You can choose between one of three 'Modes':
 
    'Silent' meaning the program begins to shred files that are dragged and dropped onto the icon immediately without even 
       asking for confirmation that you wish to delete files; 
    'Request confirmation' means that you will be asked to confirm that you wish to delete the files.
-   'Verbose,' the default mode, is whereyou will be asked to confirm that you wish to delete the files and then a window 
+   'Verbose,' the default mode, is where you will be asked to confirm that you wish to delete the files and then a window 
    will inform you of the progress the program is making.
 
 In addition you can choose one of two 'Methods':
@@ -35,5 +35,5 @@ Windows was a problem.
 Alan Entwistle, Entyware
 
 This program was developed using Bloodshed Software Dev C++ version 4.9.9.2 and random numbers are generated using a Mersenne
-Twister © 2003 written by Richard J. Wagner, building on work by Makoto Matsumoto, Takuji Nishimura, and Shawn Cokus.
+Twister © 2003 written by Richard J. Wagner, building on work by Makoto Matsumoto, Takuji Nishimura, and Shawn Cokus. All files were scanned with and up to date copy of AVG ant-virus before uploading.
 
