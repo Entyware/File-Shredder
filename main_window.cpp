@@ -21,10 +21,24 @@
 #include "text.h"
 #include "gnu_license.h"
 #include "menubar_controls.h"
+#include <iostream>
+#include <string>
+
+static void detach_console_for_gui()
+{
+ DWORD process_ids[2];
+ HWND console = GetConsoleWindow();
+ if(console && GetConsoleProcessList(process_ids, 2) == 1 && IsWindow(console))
+    ShowWindow(console, SW_HIDE);
+ FreeConsole();
+};
 
 int main (int arguments, char *argument_strings[])
 {/*Only allow a single instance of this program to run to prevent 
                                          instances competing for a hard drive */
+ bool cli_mode = arguments > 1 && !strcmp(argument_strings[1], "--cli");
+ if(!cli_mode)
+    detach_console_for_gui();
  /* general release version */ 
  if(OpenMutex(MUTEX_ALL_ACCESS, 0, FILE_SHREDDER_COPYRIGHT))
     return 0;
@@ -42,7 +56,27 @@ int main (int arguments, char *argument_strings[])
  if(!check_registration())
     return 0;
  //select appropriate mode of shredding or open main GUI window
- if(arguments > 1)                    //Program required to shred files
+ int exit_status = 0;
+ if(cli_mode)
+ {
+    if(arguments < 3)
+    {
+       std::cerr << "Usage: File Shredder.exe --cli <file-or-folder> [path ...]\n";
+       exit_status = 2;
+    }
+    else
+    {
+       std::string confirmation;
+       std::cout << "Shredding permanently deletes the selected files. Continue? [y/N] "
+                 << std::flush;
+       if(std::cin >> confirmation &&
+          (confirmation == "y" || confirmation == "Y"))
+          shredder(arguments - 1, argument_strings + 1);
+       else
+          exit_status = 1;
+    }
+ }
+ else if(arguments > 1)               //Program required to shred files
  {  
     if(!strcmp(argument_strings[1], COMPLETE_SHREDDING))
     {  /* continues a hidden instance of shredding that was terminated before 
@@ -100,7 +134,7 @@ int main (int arguments, char *argument_strings[])
  //single instance housekeeping
  ReleaseMutex(h_mutex);
  CloseHandle(h_mutex);
- return 0;
+ return exit_status;
 };
 
 /******************************************************************************/
