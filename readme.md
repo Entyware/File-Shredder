@@ -24,6 +24,15 @@ In addition you can choose one of two 'Methods':
       you log off during the run or the computer crashes any files that remain will be deleted when you next use your account.
    'Delete selected files directly,' the default method, where files are removed one by one from wherever they happen to be.
 
+You can also shred files from Command Prompt or PowerShell by passing `--cli` followed by one or more quoted file or folder
+paths. The command-line mode asks for confirmation before shredding:
+
+    "C:\path\to\File Shredder.exe" --cli "C:\path\to\file.txt"
+
+Type `y` and press Enter to proceed; any other input cancels.
+
+Run the program once interactively first to accept the licence agreement.
+
 Your selections, along with the coordinates of the various windows will be recorded in the Windows registry ready for next 
 time. 
 
